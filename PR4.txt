@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Первый сайт</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icons8-земной-шар-50.png"><!--Фавиконка-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,600;0,700;1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="head-menu">
+      <img class="faviconka" width="100px" height="100px" src="icons8-земной-шар-50.png" alt="1"></a><br>
+      <aside class="Место для рекамы" style="float:right">
+       <h2>ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА</h2>
+      </aside>
+      <nav class="mainlinks">
+        <a href="#bottom"> <h4>Первая ссылка</h4></a><br>
+        <a href="https://www.mirea.ru"> <h4>Вторая ссылка</h4></a><br>
+        <a href="https://fonts.google.com"><h4>Третья ссылка</h4></a><br>
+      </nav>
+      <hr>
+    </header>
+    <p><a id="top"></a></p>
+    <main>
+      <section class ="Работа с тэгами html">
+    <h1 id="Head">Привет</h1><!--Большой шрифт-->
+    <h2>меня</h2><!--Шрифт поменьше-->
+    <h3>зовут</h3><!--Шрифт ещё поменьше-->
+    <h4>Гриша</h4><!--Маленький шрифт-->
+    <hr>
+    <p><b>Это выделено жирным.</b> Вот не очень важный текст <strong>а тут очень важный. </strong> Вот текст на этой строке <br>
+    Тут случился перенос на новую строку</p><!--p-создает абзац, b-жирный шрифт, strong-элемент сильной значимости,br-разрыв строки-->
+    <blockquote>
+        "По подсчетам учёных, всего полминуты весёлого смеха приравнивается к 45 минутам спокойного отдыха. Непроизвольный взрыв смеха равен трём минутам занятий аэробикой, а десять тёплых улыбок — десяти минутам интенсивной гребли. Так что улыбайтесь чаще…"
+    </blockquote><!--blockquote - для цитрирования -->
+    <p><a href="#bottom">ВНИЗ</a></p><!--а-Создание ссылки-->
+    <pre><!--Форматированный текст-->
+<i>Это выделено курсивом</i> <!--i-курсивный шрифт-->
+
+<em>А на этом тексте сделан акцент</em> <!--em-Ударение на словестное содержание-->
+
+<u>Этот текст подчёркнут</u> <!--u-подчернутый шрифт-->
+
+Обычный текст<sub>маленкий текст</sub>Снова обычный текст <!--sub-подстрочное начертнание текста-->
+
+Формула: a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup> <!--sup-Надстрочное начертание текста-->
+
+<cite>Тут ссылка на первоисчточник</cite> <!--cite - ссылка на источник цитаты-->
+
+<abbr>АБР</abbr>(Аббривиатура) <!--abbr - аббревиатура-->
+</pre><!--Форматированный текст-->
+
+</pre><!--Форматированный текст-->
+</section>
+   <hr>
+   <section class="Работа с ссылкаами">
+   <a href="https://www.youtube.com" target="_blank">Ссылка на YouTube</a><br> <!--target-указывает где открыть ссылку-->
+<hr>
+    <a href="tel: +7 922 076 84 70">Мой номер телефона</a><br> <!--tel: - для номера телефона-->
+<hr>
+    <a href="mailto: gbabokha@mail.ru">Моя почта</a> <!--mailto: - для почты -->
+    </section>
+<hr>
+<section class ="Работа с списками" style="float:none">
+    <h1>Список продуктов</h1>
+    <p><a id="list"></a></p><!--Якорь на низ страницы-->
+   <ol type="I" start="1"><!--ol упорядоченый список- -->
+       <li>Молоко<!--li-элемент списка-->
+       <ul><!-- ul - Неупорядочнный список-->
+       <li>Кокосовое</li>
+        <li>Миндальное</li>
+        <li>Коровье</li>
+       </ul>
+       </li>
+       <li>Хлеб</li>
+       <li>Орешки
+       <ul>
+           <li>Грецкие</li>
+           <li>Фисташки</li>
+           <li>Фундук</li>
+       </ul>
+       </li>
+   </ol>
+    <hr>
+<dl>
+    <h1>Список терминов</h1>
+    <dt>Беллетристика</dt><!--dt-список описаний-->
+    <dd>общее название художественной литературы в прозе и стихах. Беллетристика сейчас часто упоминается в новом значении «массовой литературы» противопоставляемой «высокой литературе».</dd>  <!--dd-описание-->
+
+    <dt>Абзац</dt>
+    <dd>Отрывок текста от одной красной строки до друго</dd>
+    <dd>Красная строка, отступ в начале строки.</dd>
+
+    <dt>Вульгаризм</dt>
+    <dd>грубое слово, неправильный оборот, не принятый в литературной речи.</dd>
+    <dd>Вульгарное слово или выражение, употреблённое в литературном языке.</dd>
+
+    <dt>Диалог</dt>
+    <dd>разговор двух или нескольких персонажей.</dd>
+
+    <dt>Идиллия</dt>
+    <dd>стихотворение, в котором изображается безмятежная жизнь на лоне природы.</dd>
+</dl>
+</section>
+<hr>
+<article class="рыба текст">
+  <h2>Article 1</h2>
+  <pre>
+  Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий позволяет оценить значение модели развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки соответствующий условий активизации.
+
+  Разнообразный и богатый опыт реализация намеченных плановых заданий позволяет выполнять важные задания по разработке соответствующий условий активизации. Задача организации, в особенности же консультация с широким активом влечет за собой процесс внедрения и модернизации дальнейших направлений развития.
+</pre>
+</article>
+<hr>
+<section class = "Работа с position">
+  <div class="block">
+    <div class="block_1">
+      первый элемент
+    </div>
+    <div class="block2">
+      второй элемент
+    </div>
+    <div class="block_3">
+       третий элемент
+    </div>
+    <div class="block_4">
+      четверный элемент
+    </div>
+  </div>
+
+  <br>
+</section>
+<hr>
+<section class ="Работа с картинками">
+<a href=https://www.mirea.ru> <img width="200px" height="200px" src="https://upload.wikimedia.org/wikipedia/ru/thumb/4/4e/Patrick_star-4854.jpg/274px-Patrick_star-4854.jpg" alt="Патрик"></a><br>
+<img src=" https://papik.pro/uploads/posts/2021-09/1631913414_11-papik-pro-p-patrik-risunok-malenkii-13.jpg" alt=" Второй Патрик" usemap="#shapes">
+<map name="shapes">
+
+   <area shape="circle" coords="100, 100, 100" href="https://www.mirea.ru" alt="1"><!--Круг-->
+    <area shape="polygon" coords="300, 300, 200,500,900,100" href="https://www.mirea.ru" alt="2"><!--Прямоугольник-->
+    <area shape="rectangle" coords="500,500,900,900" href="https://www.mirea.ru" alt="3"><!--Треугольник-->
+</map>
+    <p><a href="#top">ВВЕРХ</a></p><!--Ссылка вверх-->
+    <p><a id="bottom"></a></p><!--Якорь на низ страницы-->
+  </section>
+</main>
+<footer>
+  <address>
+<h4>for more details contact</h4>
+<a href="mailto: gbabokha@mail.ru">Почта для связи</a>
+</address>
+<p><small> copyright bymyself2022 </small></p>
+</footer>
+</body>
+</html>
+
+
+CSS
+.head-menu
+{
+  background-color: pink;
+}
+main{
+  background-color: #FFF0F5;
+  font-size:25px;
+  margin-left: 50px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.mainlinks:hover
+{
+  color: red;
+  text-decoration: overline;
+  text-decoration-color: red;
+  cursor:pointer;
+}
+.mainlinks:active
+{
+  color: red
+}
+.mainlinks:visited
+{
+  color:black;
+}
+html
+{
+  font-family: 'Raleway', sans-serif;
+  display: block;
+}
+footer
+{
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px black;
+}
+header
+{
+  height: 400px;
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  border :5px solid black;
+  text-decoration: underline;
+  list-style:square;
+
+}
+aside
+{
+  position: sticky;
+  top: 100px;
+  color: black;
+  height: 100px;
+  margin-right: 100px;
+  padding: 0;
+  border: 1px black;
+  font-size: 10px;
+  border-style: double;
+
+
+}
+.faviconka
+{
+  height: 100px;
+  position: fixed;
+  top: 30;
+  right:30px;
+}
+i:first-child
+{
+  color:red;
+}
+li:first-child
+{
+  color:red;
+}
+h1:first-child
+{
+  color:red;
+}
+.block
+{
+  border :5px solid black;
+  width:800px;
+  margin: 0px auto;
+  height: 400px;
+}
+.block div
+{
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.block_1
+{
+  color: white;
+  background:blue;
+  position: relative;
+  top: 350px;
+}
+.block2
+{
+ background-color: green;
+ color: yellow;
+ position: absolute;
+ bottom:-4010px;
+ right:0px;
+
+
+}
+.block_3
+{
+  background-color: black;
+  color: white;
+  position: sticky;
+  top:0;
+}
+.block_4
+{
+  background-color: red;
+  color: purple;
+}
+
+
+

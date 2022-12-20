@@ -1,0 +1,1272 @@
+8.1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid_example.css">
+</head>
+<body>
+    <div class="container">
+        <nav>Navbar</nav>
+        <main>Main</main>
+        <div id="sidebar">Sidebar</div>
+        <div id="content1">Content1</div>
+        <div id="content2">Content2</div>
+        <div id="content3">Content3</div>
+        <footer>Footer
+            <div class="cards">
+                <div class="card card1"><a href="#">Link1</a>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="card card2"><a href="#">Link2</a>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="card card3"><a href="#">Link3</a>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="card card4"><a href="#">Link4</a>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="card card5"><a href="#">Link5</a>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="card card6"><a href="#">Link6</a>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+
+              </div>
+        </footer>
+      </div>
+      
+      
+</body>
+</html>
+
+CSS
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1.2fr 1.0fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      "sidebar main main main"
+      "sidebar content1 content2 content3"
+      "footer footer footer footer";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+  }
+  
+  nav {
+    background: #a7ffeb;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  main {
+    background: #00d5ff;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #sidebar {
+    background: #ff2605;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #content1 {
+    background: #00ff2f;
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #content2 {
+    background: #ffc800;
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #content3 {
+    background: #7300ff;
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  footer {
+    background: #fa6bff;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  a {
+    text-align: center;
+    display: block;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem;
+  }
+  .card p
+  {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+      grid-template-areas:
+        "nav"
+        "sidebar"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+  }
+  .card {
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: rgb(22, 233, 99);
+    color: rgb(0, 0, 0);
+    height: 4rem;
+    transition: all 0.5s ease-in-out 0.1s;
+    text-align: center;
+    margin: 0;
+  }
+
+  .cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(50px,auto);
+  }
+  .card1
+  {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  .card2
+  {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .card6
+  {
+    grid-row: 3/3;
+    grid-column: 2/4;
+  }
+  .card:hover
+  {
+    background: #ba82ff;
+  }
+  
+  @media (min-width: 800px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
+
+8.2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gallery-dior.css">
+</head>
+<body>
+    <div>
+        <nav class="navbar">
+                <div class="navbar-container container">
+                    <input type="checkbox" name="" id="">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <ul class="menu-items">
+                        <li><a href="index.html">Главная</a></li>
+                    </ul>
+                    <div class="box-notification">
+                    <div class="notifications">
+                        <i class="solid bell" ></i>
+                        <span class="num">3</span>
+                        <ul class="notification-list">
+                            <li>
+                                <span class="icon"><i class="solid user"></i></span>
+                                <span class="text">Уведомление!</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="solid user"></i></span>
+                                <span class="text">Уведомление!</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="solid user"></i></span>
+                                <span class="text">Уведомление!</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                    <h1 class="logo">FASHIONWORLD</h1>
+        </nav>
+    </div>
+    <section>
+          <section class="section">
+            <div class="grid">
+              <div class="item item--large">
+                <div class="item__details">
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              
+              <div class="item item--large">
+                <div class="item__details">
+
+                </div>
+              </div>
+              
+             
+              
+            </div>
+          </div>
+    </section>
+</body>
+</html>
+
+CSS
+@import url("https://fonts.googleapis.com/css?family=Arvo");
+body,
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  font-size: 13px;
+  font-family: "Arvo", monospace;
+}
+@supports (display: grid) {
+  body,
+html {
+    display: block;
+  }
+}
+
+.message {
+  border: 1px solid #d2d0d0;
+  padding: 2em;
+  font-size: 1.7vw;
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+}
+@supports (display: grid) {
+  .message {
+    display: none;
+  }
+}
+
+.section {
+  display: none;
+  padding: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 4rem;
+  }
+}
+@supports (display: grid) {
+  .section {
+    display: block;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1.5em;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: row dense;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  background: #0c9a9a;
+  color: #fff;
+  background: url("https://i.pinimg.com/474x/1c/7b/c0/1c7bc0b920ac90ef28a61fd636ce84b3.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.item:nth-of-type(2) {
+    background-image: url("https://i.pinimg.com/474x/ea/f2/2d/eaf22dfda07c03decf22b965a872c49d.jpg");
+  }
+.item:nth-of-type(3) {
+  background-image: url("https://i.pinimg.com/474x/67/42/61/674261ce900a07ea1f68ac8171846919.jpg");
+}
+.item:nth-of-type(4) {
+  background-image: url("https://i.pinimg.com/474x/36/46/e3/3646e32257d779500b7aafa570df3d01.jpg");
+}
+.item:nth-of-type(5) {
+  background-image: url("https://i.pinimg.com/474x/bf/46/c1/bf46c1add9ff9d194bcf47ae269b3bdd.jpg");
+
+}
+.item:nth-of-type(6) {
+  background-image: url("https://i.pinimg.com/474x/9b/9d/f9/9b9df9f6181642e09796829ede533b48.jpg");
+}
+.item:nth-of-type(7) {
+  background-image: url("https://i.pinimg.com/474x/d5/66/8a/d5668a95f8f5ebc15f8c12243bde79b4.jpg");
+}
+  .item:nth-of-type(8) {
+    background-image: url("https://i.pinimg.com/474x/d6/05/22/d605228736ec56016b51bd7534dd52ef.jpg");
+
+}
+  .item:nth-of-type(9) {
+    background-image: url("https://i.pinimg.com/474x/81/20/dc/8120dc310d25f4e52488bedc4e976835.jpg");
+
+}
+  .item:nth-of-type(10) {
+    background-image: url("https://i.pinimg.com/474x/59/35/af/5935afebbf01f35f7b0349c80576598e.jpg");
+}
+.item:nth-of-type(11) {
+  background-image: url("https://i.pinimg.com/474x/81/4d/31/814d319c3ffa8c5afea0db1a35b5f12f.jpg");
+}
+.item:nth-of-type(12) {
+  background-image: url("https://i.pinimg.com/474x/62/1a/d2/621ad2e82cae3624b50946e61081aa57.jpg");
+}
+.item:nth-of-type(13) {
+  background-image: url("https://i.pinimg.com/474x/be/a2/77/bea2773dbe69cf99f0286af071802b60.jpg");
+}
+.item:nth-of-type(14) {
+  background-image: url("https://i.pinimg.com/474x/64/3b/5c/643b5c1cb4f96cf5233a61284eb048f4.jpg");
+}
+.item:nth-of-type(15) {
+  background-image: url("https://i.pinimg.com/474x/ae/82/78/ae8278084b4c03c3978279e37e413b86.jpg");
+}
+.item:nth-of-type(16) {
+  background-image: url("https://i.pinimg.com/474x/71/38/b3/7138b35b6df02727cc25150e3a055b1c.jpg");
+}
+.item:nth-of-type(17) {
+  background-image: url("https://i.pinimg.com/474x/7f/6a/ea/7f6aea92a99482caac9a995eb46164c4.jpg");
+}
+.item:nth-of-type(18) {
+  background-image: url("https://i.pinimg.com/474x/47/b0/e4/47b0e4e003b82b0f53cedb268e7acb15.jpg");
+}
+.item:nth-of-type(19) {
+  background-image: url("https://i.pinimg.com/474x/3c/17/ef/3c17ef752baf0d933d3d8871e9bdd9b3.jpg");
+}
+.item:nth-of-type(20) {
+  background-image: url("https://i.pinimg.com/474x/a4/62/06/a462066668c3bf82a10f06048f17303c.jpg");
+}
+.item:nth-of-type(21) {
+  background-image: url("https://i.pinimg.com/474x/5b/cb/15/5bcb15fec629109f45a42e3972c52429.jpg");
+}
+.item:nth-of-type(22) {
+  background-image: url("https://i.pinimg.com/474x/3c/b6/df/3cb6df32b60fd1e14f825f58fba772f8.jpg");
+}
+.item:nth-of-type(23) {
+  background-image: url("https://i.pinimg.com/474x/a8/87/cf/a887cfed592751bcec60db6484b433ee.jpg");
+}
+.item:nth-of-type(24) {
+  background-image: url("https://i.pinimg.com/474x/a8/30/b9/a830b91ae41f02efdcff82e490393e88.jpg");
+}
+.item:nth-of-type(25) {
+  background-image: url("https://i.pinimg.com/474x/05/eb/3a/05eb3aed913d021cc5eb088b84d2ad5f.jpg");
+}
+.item:nth-of-type(26) {
+  background-image: url("");
+}
+.item:nth-of-type(27) {
+  background-image: url("");
+}
+
+
+
+.item:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+.item:hover {
+  transform: scale(1.05);
+}
+.item:hover:after {
+  opacity: 0;
+}
+.item--medium {
+  grid-row-end: span 2;
+}
+.item--large {
+  grid-row-end: span 3;
+}
+.item--full {
+  grid-column-end: auto;
+}
+@media screen and (min-width: 768px) {
+  .item--full {
+    grid-column: 1/-1;
+    grid-row-end: span 2;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.btn{
+  position: relative;
+  justify-content: center;
+  display: flex;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 30px 10px;
+  border: 2px solid crimson;
+  border-radius: 20px;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.btn::before{
+  background: #ff0000;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.btn1::before{
+  background-color: crimson;
+  width: 0%;
+  height: 100%;
+}
+
+.btn1:hover::before{
+  background-color: crimson;
+  width: 100%;
+}
+
+
+.btn2::before{
+  background-color: crimson;
+  width: 100%;
+  height: 0%;
+}
+.btn2:hover::before{
+  background-color: crimson;
+  height: 100%;
+}
+.btn3::before{
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.btn3:hover::before{
+  height: 380%;
+}
+.btn-primary {
+  color: #fff;
+  background:rgb(219, 120, 196);
+}
+.btn-primary:hover {
+  background: crimson;
+  transition: background 0.5s ease-in-out;
+}
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+.btn::before{
+  background: crimson;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  background: rgb(7, 21, 78);
+  color:rgb(255, 255, 255);
+  opacity: 1;
+  height: 50px;
+  z-index: 12;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color:rgb(255, 255, 255);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: crimson;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ......../ media query /.......... */
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 23px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: rgb(7, 21, 78);
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 2rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+
+  .navbar .menu-items li{
+      font-size: 1.6rem;
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .food-menu-container img {
+    margin: auto;
+  }
+
+  .food-menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-img {
+    width: 90%;
+    margin: 3rem auto;
+  }
+
+  .logo {
+    position: absolute;
+    top: 06px;
+    right: 15px;
+    font-size: 3rem;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .notifications
+  {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .img-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .img-container .btn {
+    font-size: 0.7rem;
+  }
+  .notifications
+  {
+    visibility: hidden;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .showcase-area {
+    height: 50vmax;
+  }
+}
+.btn3::before{
+  background-color: crimson;
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.btn3:hover::before{
+  height: 380%;
+}
+
+.btn4::before{
+  background-color: crimson;
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+.btn4:hover::before{
+  height: 380%;
+}
+.notifications
+{
+  visibility: hidden;
+}
+
+
+.box-notification{
+  position: absolute;
+  top: 0px;
+  left: 10px;
+}
+.notifications
+{
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  width: 50px;
+  height: 50px;
+  background-color:rgb(0, 0, 0) ;
+  background-image: url(https://cdn-icons-png.flaticon.com/128/1156/1156949.png);
+  border-radius: 30px;
+  box-shadow: border-box;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50%;
+
+}
+.notifications:hover{
+  width: 250px;
+  height: 65px;
+  text-align: left;
+  padding: 0 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color:rgb(0, 0, 0);
+  transition: all 1.5s;
+  background-position: 50%;
+  background-size: 10%;
+}
+
+.notifications .solid{
+  line-height: 60px;
+  font-size: 30px;
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 100%;
+}
+.notifications .num{
+  position: absolute;
+  top:0;
+  right:0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.notifications:hover .notification-list{
+  margin-top: 50px;
+  display: block;
+}    
+.notification-list
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0,0, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+  display: none;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.notification-list li{
+  list-style: none;
+  border-bottom:1px solid rgba(0, 0,0, 0.1);
+  padding: 8px 0;
+  display: flex;
+}
+.notification-list li:last-child{
+  border-bottom: none;
+}
+.notification-list li .icon
+{
+width: 24px;
+height: 24px;
+background: rgb(255, 255, 255);
+border-radius: 50%;
+text-align: center;
+line-height: 24px;
+margin-right: 15px;
+}
+.notification-list li .icon .solid{
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+
+
+}
+.notification-list li .text{
+position: relative;
+top:3px;
+cursor: pointer;
+
+}
+.notification-list li:hover .text{
+  font-weight: bold;
+  color:#ff0000;
+}
+.cards{
+  height: auto;
+  max-width: 2000x;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+.cards h2.header{
+  font-size: 40px;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.body
+{
+  background-color: #E1306C;
+}
+
+8.3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid_form.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Contact</h2>
+        <form>
+            <div class="wrapper">
+                 <div class="box">
+                    <input type="text" name="fname" id="fname" required>
+                    <label for="fname">First Name</label>
+                 </div>
+                 <div class="box">
+                    <input type="text" name="lname" id="lname" required>
+                    <label for="lname">Last Name</label>
+                 </div>
+                 
+            </div>
+            <div class="wrapper">
+                <div class="box">
+                   <input type="email" name="mail" id="email" required>
+                   <label for="email">Email</label>
+                </div>
+                <div class="box">
+                   <input type="tel" name="tel" id="tel" required>
+                   <label for="tel">Mobile</label>
+                </div>
+                
+           </div>
+           <div class="wrapper">
+            <div class="box">
+               <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+               <label for="email">Type</label>
+            </div>
+            </div>
+       </div>
+        </form>
+    </div>
+</body>
+</html>
+
+CSS
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container
+{
+    width: 80%;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+}
+.container h2
+{
+    color: rgb(0, 0, 0);
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.wrapper
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 30px;
+    gap: 30px;
+}
+.wrapper .box
+{
+    width: 100%;
+    position: relative;
+    padding: 20px;
+
+}
+.wrapper .box input
+{
+    width: 100%;
+    font-size: 20px;
+    background:transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(115, 255, 0);
+    transition: 0.5s linear;
+}
+.wrapper .box input:focus,
+.wrapper .box input:valid
+{
+    padding: 20px 10px;
+    background: rgb(115, 255, 0);
+    margin-top: 10px;
+}
+.wrapper .box label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    transition: 0.5s linear;
+}
+.wrapper .box input:focus ~label,
+.wrapper .box input:valid ~label
+{
+    padding: 0;
+}
+.wrapper .box textarea
+{
+    width: 100%;
+    font-size: 20px;
+    background:transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(115, 255, 0);
+    transition: 0.5s linear;
+}
+.wrapper .box textarea:focus,
+.wrapper .box textarea:valid
+{
+    padding: 20px 10px;
+    background: rgb(115, 255, 0);
+    margin-top: 10px;
+}
+.wrapper .box textarea:focus ~label,
+.wrapper .box textarea:valid ~label
+{
+    padding: 0;
+}
+
+8.4
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="C:\Users\матвей\OneDrive\Рабочий стол\домашка\Разработка сайтов\project8\CSS3.css">
+        </head>
+        <body>
+            <div class="four">
+                    <div class="AboutUs">AboutUs</div>
+                    <div class="QuickLinks">QuickLinks</div>
+                    <div class="Shop">Shop</div>
+                    <div class="ContactUs">ContactUs</div>
+            </div>
+        </body>
+    </html>
+
+CSS
+.four {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto auto 1fr auto auto auto ;
+    gap: 16px;
+    position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 120px; 
+    background-color: aqua;
+}
+
+
+@media (min-width: 768px) {
+    .four   .QuickLinks  {
+        grid-column: 1 / span 1;
+        grid-row: 1;
+    }
+    .four .Shop{
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    .four .ContactUs{
+        grid-column:2/ span 1;
+        grid-row: 1;
+    }
+    .four .AboutUs{
+        grid-column: 2/ span 2;
+        grid-row: 2;
+    }
+    
+}
+@media (min-width: 900px) {
+    .four   .QuickLinks  {
+        grid-column: 1 / span 1;
+        grid-row: 1;
+    }
+    .four .Shop{
+        grid-column: 2 / span 20;
+        grid-row: 1;
+    }
+    .four .ContactUs{
+        grid-column: 3/ span 2;
+        grid-row: 1;
+    }
+    .four .AboutUs{
+        grid-column: 4/ span 12;
+        grid-row: 1;
+    }
+    
+}
